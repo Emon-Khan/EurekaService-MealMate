@@ -3,12 +3,23 @@
 /.project
 /.settings/
 /.target/
+/.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
 
 # IntelliJ IDEA specific files
 .idea/
 *.iml
 *.iws
 out/
+
+# NetBeans specific files
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 
 # VS Code specific files
 .vscode/
@@ -23,6 +34,9 @@ pom.xml.next
 release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
+
+# STS (Spring Tool Suite) specific files
+.springBeans
 
 # OS generated files
 .DS_Store
@@ -46,23 +60,17 @@ Thumbs.db
 *.ear
 
 # Eureka Service specific files (if applicable)
-# Ignore any local configuration files that should not be committed
 *.local
-
-# Ignore IDE specific settings for Git versioning
-/.idea/
-*.iml
-*.iws
-.idea/
-/*.iml
-*.ipr
 
 # Ignore class files
 *.class
 
-# Ignore Eclipse IDE launch configurations
-*.launch
-
 # Miscellaneous
 /hs_err_pid*
 *.orig
+
+# Additional settings for specific cases
+!**/src/main/**/target/
+!**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
