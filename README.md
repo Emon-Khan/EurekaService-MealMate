@@ -55,3 +55,42 @@ This repository contains the source code for the EurekaService-MealMate, a servi
 
    Once the server is running, access the Eureka Dashboard at:
    http://localhost:8761
+
+## Docker Instructions
+
+If you'd like to skip the manual setup, you can pull and run the EurekaService-MealMate image directly from Docker Hub.
+
+### Pulling the Image from Docker Hub
+
+1. To pull the image, use the following command:
+    ```bash
+    docker pull rkemon94/eurekaservice-mealmate:latest
+    ```
+
+### Running the Eureka Server with Docker
+
+2. Run the Eureka server in a Docker container:
+    ```bash
+    docker run --name eurekaservice-container -p 8761:8761 rkemon94/eurekaservice-mealmate:latest
+    ```
+
+3. Access the Eureka Dashboard:
+
+   After running the container, you can access the Eureka Dashboard at:
+   http://localhost:8761
+
+### Stopping and Removing the Container
+
+- To stop the running container:
+    ```bash
+    docker stop eurekaservice-container
+    ```
+
+- To remove the container after stopping it:
+    ```bash
+    docker rm eurekaservice-container
+    ```
+
+## Conclusion
+
+This Eureka Service is designed to streamline the service discovery process within the MealMate microservices ecosystem. By running this service, you can ensure smooth communication and load balancing across all registered microservices.
